@@ -68,18 +68,15 @@ class Application(tk.Frame):
         self.frame_parts.configure( width=self.width + 30, height=120 )
         self.frame_parts.grid_propagate( 0 )
 
-        # プルダウンの作成
-        parts_list = ['コートスリーブ', 'ドラムフランジ', 'マグローラー'] # 部品リスト
-        input_pulldown = ttk.Combobox(self.frame_parts, values=parts_list, font=self.font_frame)
-        input_pulldown.configure(width = 15, height = 1)
-        input_pulldown.grid(row=0, column=0, padx=10, pady=10)
-        # 初期値の設定
-        input_pulldown.set('コートスリーブ')
 
-        # 仮のボタンを作成
+        # 部品のボタンを作成
         self.btn_parts = tk.Button(self.frame_parts, text='コートスリーブ', font=self.font_btn_big)
         self.btn_parts.configure(width = 15, height = 1, command=lambda: self.add_parts_name('コートスリーブ'))
-        self.btn_parts.grid(column=1, row=0, padx=30, pady= 10)
+        self.btn_parts.grid(row=0, column=0, padx=30, pady= 10)
+
+        self.btn_parts = tk.Button(self.frame_parts, text='ドラム', font=self.font_btn_big)
+        self.btn_parts.configure(width = 15, height = 1, command=lambda: self.add_parts_name('ドラム'))
+        self.btn_parts.grid(row=0, column=1, padx=30, pady= 10)
 
         # Frame_Button
         self.frame_btn = tk.LabelFrame( self.master, text='Control', font=self.font_frame )
