@@ -78,6 +78,10 @@ class Application(tk.Frame):
         self.btn_drum.configure(width = 15, height = 1, command=lambda: self.add_parts_name('ドラム'))
         self.btn_drum.grid(row=0, column=1, padx=30, pady= 10)
 
+        self.btn_d_blade = tk.Button(self.frame_parts, text='Dブレード', font=self.font_btn_big)
+        self.btn_d_blade.configure(width = 15, height = 1, command=lambda: self.add_parts_name('Dブレード'))
+        self.btn_d_blade.grid(row=0, column=2, padx=30, pady= 10)
+
         # Frame_Button
         self.frame_btn = tk.LabelFrame( self.master, text='Control', font=self.font_frame )
         self.frame_btn.pack(side="bottom")
