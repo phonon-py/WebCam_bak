@@ -70,13 +70,13 @@ class Application(tk.Frame):
 
 
         # 部品のボタンを作成
-        self.btn_parts = tk.Button(self.frame_parts, text='コートスリーブ', font=self.font_btn_big)
-        self.btn_parts.configure(width = 15, height = 1, command=lambda: self.add_parts_name('コートスリーブ'))
-        self.btn_parts.grid(row=0, column=0, padx=30, pady= 10)
+        self.btn_slv = tk.Button(self.frame_parts, text='コートスリーブ', font=self.font_btn_big)
+        self.btn_slv.configure(width = 15, height = 1, command=lambda: self.add_parts_name('コートスリーブ'))
+        self.btn_slv.grid(row=0, column=0, padx=30, pady= 10)
 
-        self.btn_parts = tk.Button(self.frame_parts, text='ドラム', font=self.font_btn_big)
-        self.btn_parts.configure(width = 15, height = 1, command=lambda: self.add_parts_name('ドラム'))
-        self.btn_parts.grid(row=0, column=1, padx=30, pady= 10)
+        self.btn_drum = tk.Button(self.frame_parts, text='ドラム', font=self.font_btn_big)
+        self.btn_drum.configure(width = 15, height = 1, command=lambda: self.add_parts_name('ドラム'))
+        self.btn_drum.grid(row=0, column=1, padx=30, pady= 10)
 
         # Frame_Button
         self.frame_btn = tk.LabelFrame( self.master, text='Control', font=self.font_frame )
